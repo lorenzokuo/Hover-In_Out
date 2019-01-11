@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hover in and out</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<style type="text/css">
+		* {
+			/*outline: 1px solid pink;*/
+		}
+		.container {
+			width: 1200px;
+			height: 350px;
+		}
+		.container .box {
+			margin: 10px;
+			width: 250px;
+			height: 300px;
+			display: inline-block;
+		}
+		img {
+			width: 250px;
+			/*height: 200px;*/
+			margin-top: 0px;
+		}
+		p {
+			text-align: center;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+	   	console.log('ready!')
+	       // your jquery codes here
+	       $('img#0').hover(function(){
+	       	$(this).attr('src','718in.png');
+	       }, function(){
+	       	$(this).attr('src','718.png');
+	       })
+
+	       $('img#1').hover(function(){
+	       	$(this).attr('src','911in.png');
+	       }, function(){
+	       	$(this).attr('src','911.png');
+	       })
+
+	       $('img#2').hover(function(){
+	       	$(this).attr('src','macanin.png');
+	       }, function(){
+	       	$(this).attr('src','macan.png');
+	       })
+
+	       $('img#3').hover(function(){
+	       	$(this).attr('src','eperin.png');
+	       }, function(){
+	       	$(this).attr('src','eper.png');
+	       })
+
+
+	    });
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<img id="0" src='718.png' data-alt-src='718in.png'>
+			<p>718 Cayman</p>
+		</div>
+		<div class="box">
+			<img id="1" src='911.png' data-alt-src='911in.png'>
+			<p>911 Carrera</p>
+		</div>
+		<div class="box">
+			<img id="2" src='macan.png' data-alt-src='macanin.png'>
+			<p>Macan</p>
+		</div>
+		<div class="box">
+			<img id="3" src='eper.png' data-alt-src='eperin.png'>
+			<p>Mission E</p>
+		</div>
+	</div>
+
+</body>
+</html>
